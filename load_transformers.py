@@ -5,7 +5,7 @@ from peft import PeftModel, PeftConfig
 
 
 # Adapter model path
-adapter_path = "adapter_model"
+adapter_path = "/content/pdf_chat_assistant/adapter_model"
 
 # Load only the adapter config initially
 peft_config = PeftConfig.from_pretrained(adapter_path)
