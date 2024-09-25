@@ -129,7 +129,7 @@ def main(log_file_path):
     
     st.title('Log File Manager')
 
-    log_file_path = 'processed_files.log'
+    log_file_path = '/content/pdf_chat_assistant/processed_files.log'
 
     # Button to clear the log file
     if st.button('Clear Log'):
@@ -195,10 +195,10 @@ def main(log_file_path):
             table = pa.Table.from_pandas(df)
 
             # Write to Parquet file
-            pq.write_table(table, 'generated_from_txt.parquet')
+            pq.write_table(table, '/content/pdf_chat_assistant/generated_from_txt.parquet')
             
             # Read back the Parquet file to verify
-            read_df = pd.read_parquet('generated_from_txt.parquet')
+            read_df = pd.read_parquet('/content/pdf_chat_assistant/generated_from_txt.parquet')
             st.write(read_df.head())
             
             # Log the processed file
@@ -226,7 +226,7 @@ def chatbot():
       
 
 if __name__ == "__main__":
-    log_file_path = 'processed_files.log'
+    log_file_path = '/content/pdf_chat_assistant/processed_files.log'
     
     main(log_file_path)
     chatbot()
