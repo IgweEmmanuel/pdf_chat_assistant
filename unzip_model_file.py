@@ -2,10 +2,10 @@ import zipfile
 import os
 
 # Path to the zip file
-zip_file_path = '9fbc2581-6a92-46fa-acb5-003b9efebac6.zip'
+zip_file_path = '/content/pdf_chat_assistant/9fbc2581-6a92-46fa-acb5-003b9efebac6.zip'
 
 # Destination directory to extract to
-destination_dir = './adapter_model'
+destination_dir = '/content/pdf_chat_assistant/adapter_model'
 
 # Ensure destination directory exists
 os.makedirs(destination_dir, exist_ok=True)
